@@ -4,18 +4,18 @@ services:
   pihole:
     extends:
       service: pihole
-      file: dns/docker-compose.yaml
+      file: pihole/docker-compose.yaml
     networks:
       home:
-        ipv4_address: 192.168.123.201
+        ipv4_address: 192.168.1.201
 
-  another:
-    extends:
-      service: another
-      file: another/docker-compose.yaml
-    networks:
-      home:
-        ipv4_address: 192.168.123.202
+  # another:
+  #   extends:
+  #     service: another
+  #     file: another/docker-compose.yaml
+  #   networks:
+  #     home:
+  #       ipv4_address: 192.168.123.202
         
 networks:
   home:
@@ -24,6 +24,6 @@ networks:
       parent: eth0
     ipam:
       config:
-        - subnet: 192.168.123.0/24
-          gateway: 192.168.123.1
-          ip_range: 192.168.123/28
+        - subnet: 192.168.1.0/24
+          gateway: 192.168.1.1
+          ip_range: 192.168.1.192/28

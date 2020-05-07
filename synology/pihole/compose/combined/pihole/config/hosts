@@ -3,5 +3,5 @@
 127.0.0.1  pihole
 ::1        pihole
 
-192.168.123.1   gateway
-192.168.123.201 pihole
+192.168.1.1   gateway
+192.168.1.201 pihole

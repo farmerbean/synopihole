@@ -24,6 +24,6 @@ services:
     volumes:
       - /volume1/docker/pihole/volume-configs:/etc/pihole:rw
       - /volume1/docker/pihole/pihole-configs:/etc/hosts:ro
-      - /volume1/docker/pihole/pihole-configs:/etc/resolv.conf:ro
-      - /volume1/docker/pihole/dnsmasq.d-configs:/etc/dnsmasq.d:ro
+      - /volume1/docker/pihole/resolv.conf:/etc/resolv.conf:ro
+      - /volume1/docker/pihole/dnsmasq.d:/etc/dnsmasq.d:ro
     restart: always

@@ -3,7 +3,7 @@ version: '2'
 services:
   pihole:
     container_name: pihole
-    image: pihole/pihole:4.0.0-1
+    image: pihole/latest
     hostname: pihole
     domainname: farmerbean.dev
     mac_address: d0:ca:ab:cd:ef:01

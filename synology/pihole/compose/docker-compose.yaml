@@ -13,7 +13,7 @@ services:
       - NET_ADMIN
     networks:
       docker_network:
-        ipv4_address: 192.168.1.199   # <-- Update
+        ipv4_address: 192.168.1.201   # <-- Update
     dns:
       - 127.0.0.1
       - 8.8.8.8
@@ -24,7 +24,7 @@ services:
       - 67/udp
       - 80/tcp
     environment:
-      ServerIP: 192.168.1.199         # <-- Update (match ipv4_address)
+      ServerIP: 192.168.1.201        # <-- Update (match ipv4_address)
       VIRTUAL_HOST: pihole.farmerbean.dev  # <-- Update (match hostname + domainname)
       WEBPASSWORD: "pihole"                   # <-- Add password (if required)
     restart: unless-stopped

@@ -22,8 +22,15 @@ services:
       DNS1: 127.0.0.1
       DNS2: 8.8.8.8
     volumes:
-      - /volume1/docker/pihole/volume-configs:/etc/pihole:rw
-      - /volume1/docker/pihole/pihole-configs:/etc/hosts:ro
+#      - /volume1/docker/pihole/volume-configs:/etc/pihole:rw
+#      - /volume1/docker/pihole/pihole-configs:/etc/hosts:ro
+#      - /volume1/docker/pihole/resolv.conf:/etc/resolv.conf:ro
+#      - /volume1/docker/pihole/dnsmasq.d:/etc/dnsmasq.d:ro
+#    restart: always
+    volumes:
+      - /volume1/docker/pihole/volume:/etc/pihole:rw
+      - /volume1/docker/pihole/hosts:/etc/hosts:ro
       - /volume1/docker/pihole/resolv.conf:/etc/resolv.conf:ro
-      - /volume1/docker/pihole/dnsmasq.d:/etc/dnsmasq.d:ro
+      - /volume1/docker/pihole/dnsmasq.conf:/etc/dnsmasq.d/02-network.conf:ro
     restart: always
+
